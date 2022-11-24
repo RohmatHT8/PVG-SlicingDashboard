@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #fff;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #fff;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #545DFF;
+        }
+  </style>
+</head>
+<body>
+ <main class="w-screen h-screen bg-[#fefcfc] font-Nunito grid grid-cols-12">
+   <!-- sidebar -->
+  <div class="lg:col-span-2 bg-[#fcfcff]">
+    <h1 class="text-center mt-10 font-bold text-2xl text-primary">SalesDash</h1>
+    <div class="mt-10"> 
+        <div class="listdashboard-active">
+          <span class="material-symbols-outlined">dashboard</span>
+          <p>Dashboard</p>
+          <div class="w-[6px] h-[35px] bg-primary absolute right-0 top-0 rounded-l-lg"></div>
+        </div>
+        <div class="listdashboard">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <p>Balance</p>
+          <div class="w-[6px] h-[35px] hidden bg-primary absolute right-0 top-0 rounded-l-lg"></div>
+        </div>
+        <div class="listdashboard">
+          <span class="material-symbols-outlined">swap_horizontal_circle</span>
+          <p>Transaction</p>
+          <div class="w-[6px] h-[35px] hidden bg-primary absolute right-0 top-0 rounded-l-lg"></div>
+        </div>
+        <div class="listdashboard">
+          <span class="material-symbols-outlined">inventory_2</span>
+          <p>Product</p>
+          <div class="w-[6px] h-[35px] hidden bg-primary absolute right-0 top-0 rounded-l-lg"></div>
+        </div>
+        
+        <div class="listdashboard">
+          <span class="material-symbols-outlined">lan</span>
+          <p>Channel</p>
+          <div class="w-[6px] h-[35px] absolute right-8 top-2">
+            <span class="material-symbols-outlined">keyboard_arrow_up</span>
+          </div>
+          <div class="w-[6px] h-[35px] absolute right-8 top-2 hidden">
+            <span class="material-symbols-outlined hidden">keyboard_arrow_down</span>
+          </div>
+          <div class="w-[6px] h-[35px] hidden bg-primary absolute right-0 top-0 rounded-l-lg"></div>
+        </div>
+        <!-- child list channel -->
+        <div class="visible">
+          <div class="listdashboard-child">
+            <p>Product</p>
+          </div>
+          <div class="listdashboard-child">
+            <p>Ballance</p>
+          </div>
+          <div class="listdashboard-child">
+            <p>Transaction</p>
+          </div>
+        </div>
+        <!-- end child list channel -->
+      </div>
+      <div class="px-6">
+        <hr class="border border-gray-300 bg-gray-300">
+      </div>
+      <div class="listdashboard mt-4">
+        <span class="material-symbols-outlined">logout</span>
+        <p>Logout</p>
+      </div>
+   </div>
+   <!-- end sidebar -->
+   <!-- main section -->
+   <section class="pt-5 lg:col-span-8 px-10 overflow-x-auto">
+      <h1 class="text-2xl font-bold text-dark">Dashboard</h1>
+      <p class="text-sm font-bold text-secondary" >Today's date: Sun, 10 April 2022</p>
+
+      <div class="w-full grid grid-cols-3 gap-2 mt-5">
+
+        <div class="py-2 px-3 bg-white shadow-md rounded-md">
+          <p class="font-bold text-secondary" >Profit</p>
+          <h1 class="text-2xl font-bold text-dark">Rp. 11.500.000</h1>
+          <div class="text-red-400 flex justify-end items-center gap-1">
+            <div class="rotate-90">
+              <span class="material-symbols-outlined">arrow_outward</span>
+            </div>
+            <p class="font-bold text-xs">0.3% compared to 7 days ago</p>
+          </div>
+        </div>
+
+        <div class="py-2 px-3 bg-white shadow-md rounded-md">
+          <p class="font-bold text-secondary" >Sales</p>
+          <h1 class="text-2xl font-bold text-dark">Rp. 56.000.000</h1>
+          <div class="text-green-400 flex justify-end items-center gap-1">
+            <span class="material-symbols-outlined">arrow_outward</span>
+            <p class="font-bold text-xs">0.5% compared to 7 days ago</p>
+          </div>
+        </div>
+        
+        <div class="py-2 px-3 bg-white shadow-md rounded-md">
+          <p class="font-bold text-secondary" >Transaction</p>
+          <h1 class="text-2xl font-bold text-dark">1.090 <span class="text-base">transaction</span></h1>
+          <div class="text-yellow-400 flex justify-end items-center gap-1">
+            <div class="rotate-45 flex items-center">
+              <span class="material-symbols-outlined">arrow_outward</span>
+            </div>
+            <p class="font-bold text-xs">0.5% compared to 7 days ago</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 w-full h-auto mt-8">
+        <div class="col-span-2">
+          <div class="rounded-lg shadow-md bg-white py-3 px-2 mb-8">
+            <p class="text-sm font-bold text-secondary mb-2" >Sales Chart</p>
+
+            <div class="grid grid-rows-5 gap-2 relative">
+              
+              <div class="grid grid-cols-5">
+                <div class="py-2">
+                  <p class="text-xs font-bold text-gray-300" >Rp. 8.000.000</p>
+                </div>
+                <div class="col-span-4 pr-10">
+                  <hr class="mt-3 border-dashed w-full">
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-5">
+                <div class="py-2">
+                  <p class="text-xs font-bold text-gray-300" >Rp. 6.000.000</p>
+                </div>
+                <div class="col-span-4 pr-10">
+                  <hr class="mt-3 border-dashed w-full">
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-5">
+                <div class="py-2">
+                  <p class="text-xs font-bold text-gray-300" >Rp. 4.000.000</p>
+                </div>
+                <div class="col-span-4 pr-10">
+                  <hr class="mt-3 border-dashed w-full">
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-5">
+                <div class="py-2">
+                  <p class="text-xs font-bold text-gray-300" >Rp. 2.000.000</p>
+                </div>
+                <div class="col-span-4 pr-10">
+                  <hr class="mt-3 border-dashed w-full">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-5">
+                <div class="py-2">
+                </div>
+                <div class="col-span-4">
+                  <div class="grid grid-cols-4">
+                     <div>
+                        <p class="text-xs font-bold text-gray-300 text-center">04 Apr 22</p>
+                     </div>
+                     <div>
+                        <p class="text-xs font-bold text-gray-300 text-center">06 Apr 22</p>
+                     </div>
+                     <div>
+                        <p class="text-xs font-bold text-gray-300 text-center">07 Apr 22</p>
+                     </div>
+                     <div>
+                        <p class="text-xs font-bold text-gray-300 text-center">08 Apr 22</p>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute w-[74%] right-10 bottom-14">
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 280" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(84, 93, 255, 0)" offset="5%"></stop><stop stop-color="rgba(84, 93, 255, 0.5)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,140L40,158.7C80,177,160,215,240,191.3C320,168,400,84,480,60.7C560,37,640,75,720,112C800,149,880,187,960,168C1040,149,1120,75,1200,74.7C1280,75,1360,149,1440,182C1520,215,1600,205,1680,191.3C1760,177,1840,159,1920,149.3C2000,140,2080,140,2160,154C2240,168,2320,196,2400,186.7C2480,177,2560,131,2640,135.3C2720,140,2800,196,2880,205.3C2960,215,3040,177,3120,154C3200,131,3280,121,3360,102.7C3440,84,3520,56,3600,79.3C3680,103,3760,177,3840,191.3C3920,205,4000,159,4080,126C4160,93,4240,75,4320,70C4400,65,4480,75,4560,65.3C4640,56,4720,28,4800,23.3C4880,19,4960,37,5040,46.7C5120,56,5200,56,5280,84C5360,112,5440,168,5520,172.7C5600,177,5680,131,5720,107.3L5760,84L5760,280L5720,280C5680,280,5600,280,5520,280C5440,280,5360,280,5280,280C5200,280,5120,280,5040,280C4960,280,4880,280,4800,280C4720,280,4640,280,4560,280C4480,280,4400,280,4320,280C4240,280,4160,280,4080,280C4000,280,3920,280,3840,280C3760,280,3680,280,3600,280C3520,280,3440,280,3360,280C3280,280,3200,280,3120,280C3040,280,2960,280,2880,280C2800,280,2720,280,2640,280C2560,280,2480,280,2400,280C2320,280,2240,280,2160,280C2080,280,2000,280,1920,280C1840,280,1760,280,1680,280C1600,280,1520,280,1440,280C1360,280,1280,280,1200,280C1120,280,1040,280,960,280C880,280,800,280,720,280C640,280,560,280,480,280C400,280,320,280,240,280C160,280,80,280,40,280L0,280Z"></path></svg>
+              </div>
+            </div>
+            
+          </div>
+          <div class="shadow-md bg-white rounded-lg p-3">
+            <p class="text-sm font-bold text-secondary" >Top 5 Product</p>
+            <div class="grid grid-cols-5 mt-3 gap-3">
+              <div class="border-2 border-[#989EFF] rounded-lg flex flex-col items-center py-3">
+                <img src="../asset/maxim.png" alt="maxim" width="40px">
+                <p class="text-primary text-sm font-bold">Maxim</p>
+                <p class="text-secondary text-xs font-bold">150.000</p>
+                <p class="text-dark font-bold">120 <span class="text-xs">transaction</span> </p>
+              </div>
+              <div class="border-2 border-[#989EFF] rounded-lg flex flex-col items-center py-3">
+                <img src="../asset/telkomsel.png" alt="telkomsel.png" width="40px">
+                <p class="text-primary text-sm font-bold">Telkomsel</p>
+                <p class="text-secondary text-xs font-bold">25.000</p>
+                <p class="text-dark font-bold">98 <span class="text-xs">transaction</span> </p>
+              </div>
+              <div class="border-2 border-[#989EFF] rounded-lg flex flex-col items-center py-3">
+                <img src="../asset/three.png" alt="three.png" width="40px">
+                <p class="text-primary text-sm font-bold">Three</p>
+                <p class="text-secondary text-xs font-bold">50.000</p>
+                <p class="text-dark font-bold">74 <span class="text-xs">transaction</span> </p>
+              </div>
+              <div class="border-2 border-[#989EFF] rounded-lg flex flex-col items-center py-3">
+                <img src="../asset/ovo.png" alt="ovo.png" width="40px">
+                <p class="text-primary text-sm font-bold">OVO</p>
+                <p class="text-secondary text-xs font-bold">100.000</p>
+                <p class="text-dark font-bold">68 <span class="text-xs">transaction</span> </p>
+              </div>
+              <div class="border-2 border-[#989EFF] rounded-lg flex flex-col items-center py-3">
+                <img src="../asset/pln.png" alt="pln.png" width="40px">
+                <p class="text-primary text-sm font-bold">Maxim</p>
+                <p class="text-dark font-bold">50 <span class="text-xs">transaction</span> </p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        <div class="p-3 bg-white shadow-md rounded-lg">
+          <p class="text-sm font-bold text-secondary mb-3">Top 5 Agents</p>
+          <div class="p-3 grid grid-cols-4 justify-center items-center">
+            <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+              <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+                <img src="../asset/pp.jpeg" alt="pp">
+              </div>
+            </div>
+            <div class="col-span-3">
+              <p class="text-sm font-bold text-primary">PT Suka Maju Jakarta</p>
+              <div class="grid grid-cols-3">
+                <div>
+                  <p class="text-gray-300 text-xs font-bold">Profit</p>
+                  <p class="text-gray-300 text-xs font-bold">Sales</p>
+                  <p class="text-gray-300 text-xs font-bold">Transaction</p>
+                </div>
+                <div class="col-span-2">
+                  <p class="text-dark text-xs font-bold">Rp. 3.700.000</p>
+                  <p class="text-dark text-xs font-bold">Rp. 7.230.000</p>
+                  <p class="text-dark text-xs font-bold">43 Transaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 grid grid-cols-4 justify-center items-center">
+            <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+              <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+                <img src="../asset/pp.jpeg" alt="pp">
+              </div>
+            </div>
+            <div class="col-span-3">
+              <p class="text-sm font-bold text-primary">Susi Susanti</p>
+              <div class="grid grid-cols-3">
+                <div>
+                  <p class="text-gray-300 text-xs font-bold">Profit</p>
+                  <p class="text-gray-300 text-xs font-bold">Sales</p>
+                  <p class="text-gray-300 text-xs font-bold">Transaction</p>
+                </div>
+                <div class="col-span-2">
+                  <p class="text-dark text-xs font-bold">Rp. 3.550.000</p>
+                  <p class="text-dark text-xs font-bold">Rp. 5.230.000</p>
+                  <p class="text-dark text-xs font-bold">43 Transaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 grid grid-cols-4 justify-center items-center">
+            <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+              <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+                <img src="../asset/pp.jpeg" alt="pp">
+              </div>
+            </div>
+            <div class="col-span-3">
+              <p class="text-sm font-bold text-primary">Toko Pulsa Depok</p>
+              <div class="grid grid-cols-3">
+                <div>
+                  <p class="text-gray-300 text-xs font-bold">Profit</p>
+                  <p class="text-gray-300 text-xs font-bold">Sales</p>
+                  <p class="text-gray-300 text-xs font-bold">Transaction</p>
+                </div>
+                <div class="col-span-2">
+                  <p class="text-dark text-xs font-bold">Rp. 3.700.000</p>
+                  <p class="text-dark text-xs font-bold">Rp. 7.230.000</p>
+                  <p class="text-dark text-xs font-bold">43 Transaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 grid grid-cols-4 justify-center items-center">
+            <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+              <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+                <img src="../asset/pp.jpeg" alt="pp">
+              </div>
+            </div>
+            <div class="col-span-3">
+              <p class="text-sm font-bold text-primary">PT Sukamaju Bogor</p>
+              <div class="grid grid-cols-3">
+                <div>
+                  <p class="text-gray-300 text-xs font-bold">Profit</p>
+                  <p class="text-gray-300 text-xs font-bold">Sales</p>
+                  <p class="text-gray-300 text-xs font-bold">Transaction</p>
+                </div>
+                <div class="col-span-2">
+                  <p class="text-dark text-xs font-bold">Rp. 3.700.000</p>
+                  <p class="text-dark text-xs font-bold">Rp. 7.230.000</p>
+                  <p class="text-dark text-xs font-bold">43 Transaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 grid grid-cols-4 justify-center items-center">
+            <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+              <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+                <img src="../asset/pp.jpeg" alt="pp">
+              </div>
+            </div>
+            <div class="col-span-3">
+              <p class="text-sm font-bold text-primary">Anton Antonam</p>
+              <div class="grid grid-cols-3">
+                <div>
+                  <p class="text-gray-300 text-xs font-bold">Profit</p>
+                  <p class="text-gray-300 text-xs font-bold">Sales</p>
+                  <p class="text-gray-300 text-xs font-bold">Transaction</p>
+                </div>
+                <div class="col-span-2">
+                  <p class="text-dark text-xs font-bold">Rp. 3.700.000</p>
+                  <p class="text-dark text-xs font-bold">Rp. 7.230.000</p>
+                  <p class="text-dark text-xs font-bold">43 Transaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+   </section>
+   <!-- end main section -->
+   <div class="lg:col-span-2 bg-[#F3F4FF] p-5">
+
+      <div class="flex justify-center items-center gap-2">
+        <div class="w-[59px] h-[59px] border-2 border-[#989EFF] rounded-full flex justify-center items-center">
+          <div class="w-[52px] h-[52px] rounded-full overflow-hidden bg-amber-100 object-cover">
+            <img src="../asset/pp.jpeg" alt="pp">
+          </div>
+        </div>
+        <div class="">
+          <p class="text-sm font-bold text-dark">Helena Kusuma</p>
+          <p class="text-xs font-bold text-secondary">Owner at PT Suka Maju</p>
+        </div>
+        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </div>
+
+      <div class="bg-white rounded-lg px-5 pt-2 mt-8 h-40 shadow-md flex flex-col justify-evenly items-center relative">
+        <p class="text-sm font-bold text-secondary">Total Balance</p>
+        <p class="font-bold text-dark text-2xl">Rp 1.580.000.000</p>
+        <button class="w-full bg-primary hover:bg-[#424aeb] py-2 rounded-lg text-white">Top Up</button>
+        <div class="absolute top-5 right-0 text-secondary">
+          <span class="material-symbols-outlined">more_vert</span>
+        </div>
+      </div>
+    </div>
+   </div>
+ </main>
+</body>
+</html>
